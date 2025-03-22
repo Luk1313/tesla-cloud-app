@@ -9,7 +9,7 @@ st.set_page_config(layout="wide", page_title="TSLA - Análisis en la Nube")
 st.title("📈 Tesla Inc. (TSLA) - Dashboard Automático")
 
 # Leer datos desde archivo CSV interno
-df = pd.read_csv("datos_tesla.csv")
+df = pd.read_csv("datos_tesla.csv") 
 df.columns = df.columns.str.strip().str.lower()
 df = df.rename(columns={'último': 'cierre', 'vol.': 'volumen'})
 df['fecha'] = pd.to_datetime(df['fecha'])
